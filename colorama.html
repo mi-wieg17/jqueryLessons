@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){               
+                $(".knapp").click(function(){
+                    var setColor = $(".myColor").val();
+                    $("body").css('background-color', setColor);
+                });
+            });
+        </script>
+    </head>
+    <body>     
+        <div class="main">
+            <input type="text" class="myColor">
+            <button class="knapp">Color it!</button>
+        </div>
+    </body>
+</html>

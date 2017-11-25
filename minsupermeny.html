@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+       
+       <script>
+            $(document).ready(function(){
+                
+                var menyItem = [
+                    "Byxor", 
+                    "Skor",
+                    "Jackor",
+                    "Tshirts"
+                ]
+
+                $.each(menyItem, function(i, val) {
+
+                    $(".minMeny").append("<li>" + val + "</li>")
+
+                });
+
+                for (i = 0; i < menyItem.length; i++) {
+                    $(".minMeny").append("<li>" + menyItem[i] + "</li>")
+                };
+
+            });
+        </script>
+
+    
+
+    </head>
+
+    <body>
+      
+        <div class="nav" style="width: 20%; float: left;">
+            <h1>Min Super Shop</h1>
+            <ul class="minMeny"></ul>
+        </div>
+
+    </body>
+</html>

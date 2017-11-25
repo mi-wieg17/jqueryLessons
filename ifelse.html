@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        
+
+        <script>
+            $(document).ready(function(){
+                
+                $(".knapp").click(function(){
+                    nummer1 = $(".value1").val();
+                    nummer2 = $(".value2").val();
+
+                    countType = $(".useCountType").val();
+
+                    console.log(nummer1)
+                    console.log(nummer2)
+                    console.log(countType)
+
+                        if (countType == "plus"){
+
+                            resultat = (+nummer1) + (+nummer2);
+                            $(".visaResultat").append("<p>" + resultat + "</p>");
+
+
+                        } else if (countType == "minus") {
+
+                            resultat = nummer1 - nummer2
+                            $(".visaResultat").append("<p>" + resultat + "</p>");
+
+                        } else if (countType == "ganger") {
+
+                            resultat = nummer1 * nummer2
+                            $(".visaResultat").append("<p>" + resultat + "</p>");
+
+                        } else {
+
+                            resultat = nummer1 / nummer2
+                            $(".visaResultat").append("<p>" + resultat + "</p>");
+
+                        };
+
+                });
+
+            });
+        </script>
+
+
+    </head>
+
+    <body>
+      
+        <div class="main">
+
+            <div>
+                <input type="number" class="value1"> 
+                <select class="useCountType">
+                    <option value="plus">Plus</option>
+                    <option value="minus">Minus</option>
+                    <option value="ganger">Gånger</option>
+                    <option value="dela">Dela</option>
+                </select>
+                <input type="number" class="value2">
+            </div>
+
+            <div><button class="knapp">Räkna</button></div>
+            <div class="visaResultat">Resultat: </div>
+
+        </div>
+
+    </body>
+</html>
